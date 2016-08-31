@@ -8,7 +8,7 @@ MAINTAINER marcelstoer
 # - cd <nodemcu-firmware>
 # - docker run --rm -ti -v `pwd`:/opt/nodemcu-firmware docker-nodemcu-build
 
-RUN apt-get update && apt-get install -y wget unzip git make python-serial srecord bc xz-utils build-essential
+RUN apt-get update && apt-get install -y wget unzip git make python-serial srecord bc xz-utils build-essential lua-filesystem lua5.1
 RUN mkdir /opt/nodemcu-firmware
 WORKDIR /opt/nodemcu-firmware
 
