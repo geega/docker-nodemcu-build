@@ -8,7 +8,7 @@ MAINTAINER marcelstoer
 # - cd <nodemcu-firmware>
 # - docker run --rm -ti -v `pwd`:/opt/nodemcu-firmware docker-nodemcu-build
 
-RUN apt-get update && apt-get install -y --no-install-recommends wget unzip git make python-serial srecord bc gcc lua-filesystem lua5.1 mkdocs s3cmd && \
+RUN apt-get update && apt-get install -y --no-install-recommends wget unzip git make python-serial srecord bc gcc lua-filesystem lua5.1 s3cmd && \
     apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
