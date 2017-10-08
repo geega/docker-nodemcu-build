@@ -8,7 +8,9 @@ MAINTAINER marcelstoer
 # - cd <nodemcu-firmware>
 # - docker run --rm -ti -v `pwd`:/opt/nodemcu-firmware docker-nodemcu-build
 
-RUN apt-get update && apt-get install -y --no-install-recommends wget unzip git mkdocs s3cmd && \
+RUN apt-get update && apt-get install -y --no-install-recommends wget unzip git mkdocs s3cmd curl && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install git-lfs && \
     apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
